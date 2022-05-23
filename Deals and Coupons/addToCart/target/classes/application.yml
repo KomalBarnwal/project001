@@ -1,0 +1,26 @@
+server:
+  port: 8081
+  
+spring: 
+ application:
+  name: add-to-cart 
+
+ data:
+  mongodb:
+   uri: mongodb://localhost:27017/AddToCartDB
+   database: CartDB 
+
+logging:
+ level:
+  root: INFO
+   com.casestudy=TRACE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+     defaultZone: http://localhost:8761/eureka/
+ 
+  instance:
+    hostname: localhost
